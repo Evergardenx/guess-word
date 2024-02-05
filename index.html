@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This challenge is great to advance your JavaScript skills. The challenge is to create a small game that tests your data management and DOM manipulation with JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="Qr code, Library, Challenge, HTML, CSS, Saas, JavaScript"
+    />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLES -->
+    <link href="./styles/index.css" rel="stylesheet" />
+
+    <link
+      rel="icon"
+      href="assets/favicon.ico"
+      type="image/x-icon"
+      sizes="any"
+    />
+    <title>Word Scramblle</title>
+  </head>
+  <body>
+    <div class="game">
+      <picture class="game__logo">
+        <img src="./assets/imgs/Word Scramblle.svg" alt="Word Scramblle" />
+      </picture>
+
+      <div class="game__word">
+        <span class="word">relowf</span>
+      </div>
+
+      <div class="game__info">
+        <div class="tries-container">
+          <p class="tries__content">Tries (<span id="tries">0</span>/5):</p>
+          <div class="dots_group">
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
+          </div>
+        </div>
+        <div class="mistakes">
+          <p class="mistakes__content">Mistakes: <strong></strong></p>
+        </div>
+      </div>
+
+      <form class="game__inputs"></form>
+
+      <div class="game__actions">
+        <button class="button" id="randomButton">Random</button>
+        <button class="button" id="resetButton">Reset</button>
+      </div>
+    </div>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

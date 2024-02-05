@@ -1,0 +1,22 @@
+$background: url("/assets/imgs/bg-guess-the-word.png") no-repeat center / cover;
+
+$color-primary: #c951e7;
+$color-white: #f2f5f9;
+$color-secondary: #97a3b6;
+$color-secondary-foreground: #4a5567;
+$color-check: #7429c6;
+$color-dark: #030616;
+$card: linear-gradient(135deg, $color-dark 10%, #1e2738);
+$active: #672171;
+
+$shadow-card: 0px 0.375rem 0px 0px rgba($color-dark, 0.5);
+$shadow-button: 0px 0.375rem 0px 0px rgba($active, 0.8);
+
+$radius: 0.625rem;
+
+$font-primary: "Outfit", sans-serif;
+
+$lg: 2rem;
+$md: 1.25rem;
+$sm: 0.75rem;
+$button: 0.875rem;

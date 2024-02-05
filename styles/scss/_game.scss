@@ -1,0 +1,159 @@
+.game {
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+  background: $card;
+  padding: 2rem;
+  border-radius: $radius;
+  font-size: 1.125rem;
+  gap: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game__logo {
+  width: 100%;
+  img {
+    width: 100%;
+    max-width: 12rem;
+    margin-inline: auto;
+  }
+}
+
+.game__word {
+  background: $color-secondary-foreground;
+  color: $color-secondary;
+  width: 100%;
+  text-align: center;
+  border-radius: $radius;
+  padding: 1rem 2rem;
+
+  -webkit-box-shadow: $shadow-card;
+  -moz-box-shadow: $shadow-card;
+  box-shadow: $shadow-card;
+
+  .word {
+    display: block;
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.325em;
+    text-transform: lowercase;
+
+    @media (min-width: 365px) {
+      font-size: 2em;
+      letter-spacing: 0.625em;
+    }
+  }
+}
+
+.game__info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: end;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+
+  .tries-container,
+  .mistakes {
+    flex-wrap: wrap;
+    > p {
+      font-size: $button;
+      color: $color-secondary-foreground;
+      font-weight: 500;
+    }
+  }
+
+  .tries-container {
+    cursor: default;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+
+    p {
+      margin-right: 0.25rem;
+    }
+
+    .dots {
+      display: inline-block;
+      width: 0.625em;
+      height: 0.625em;
+      border-radius: 50%;
+      background: rgba($color-secondary-foreground, 0.5);
+      border: 1px solid $color-dark;
+
+      &.check {
+        background: $color-check;
+      }
+    }
+  }
+
+  .mistakes {
+    strong {
+      margin-left: 0.25rem;
+      color: $color-secondary;
+      font-size: $md;
+      font-weight: 500;
+    }
+  }
+}
+
+.game__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  input {
+    width: clamp(2rem, 8vw, 3rem);
+    height: clamp(2rem, 8vw, 3rem);
+    max-width: 100%;
+    border-radius: $radius;
+    border: 2px solid $color-secondary;
+    text-align: center;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: $color-white;
+
+    font-size: clamp($sm, 10vw, $md);
+
+    &::placeholder {
+      color: transparent;
+      transition: 0.3s;
+    }
+
+    &:focus {
+      caret-color: transparent;
+      border-color: $color-check;
+
+      &::placeholder {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.game__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: $lg;
+
+  .button {
+    width: 100%;
+    @media (min-width: 365px) {
+      width: fit-content;
+    }
+    -webkit-box-shadow: $shadow-button;
+    -moz-box-shadow: $shadow-button;
+    box-shadow: $shadow-button;
+  }
+}
